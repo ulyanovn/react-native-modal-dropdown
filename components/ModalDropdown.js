@@ -185,6 +185,7 @@ export default class ModalDropdown extends Component {
 				       transparent={true}
 				       onRequestClose={this._onRequestClose.bind(this)}
 				       supportedOrientations={['portrait', 'portrait-upside-down', 'landscape', 'landscape-left', 'landscape-right']}>
+					<View style={styles.overlay}/>
 					<TouchableWithoutFeedback
 						onPress={this._onModalPress.bind(this)}>
 						<View style={styles.modal}>
@@ -404,5 +405,14 @@ const styles = StyleSheet.create({
 	separator: {
 		height: StyleSheet.hairlineWidth,
 		backgroundColor: 'lightgray'
+	},
+	overlay: {
+		position: 'absolute',
+		top: 0,
+		bottom: 0,
+		left: 0,
+		right: 0,
+		marginTop: 65,
+		backgroundColor: 'rgba(0,0,0,0.5)'
 	}
 });
