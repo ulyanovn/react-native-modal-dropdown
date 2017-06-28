@@ -32,7 +32,7 @@ export default class ModalDropdown extends Component {
 		accessible: PropTypes.bool,
 		animated: PropTypes.bool,
 		showsVerticalScrollIndicator: PropTypes.bool,
-		keyboardShouldPersistTaps: PropTypes.string,
+		keyboardShouldPersistTaps: PropTypes.bool,
 
 		style: PropTypes.oneOfType([PropTypes.number, PropTypes.object, PropTypes.array]),
 		textStyle: PropTypes.oneOfType([PropTypes.number, PropTypes.object, PropTypes.array]),
@@ -56,7 +56,7 @@ export default class ModalDropdown extends Component {
 		options: null,
 		animated: true,
 		showsVerticalScrollIndicator: true,
-		keyboardShouldPersistTaps: 'never'
+		keyboardShouldPersistTaps: false
 	};
 
 	constructor(props) {
