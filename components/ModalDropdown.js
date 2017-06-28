@@ -170,9 +170,10 @@ export default class ModalDropdown extends Component {
 	}
 
 	_onButtonPress() {
-		if (!this.props.onDropdownWillShow ||
-			this.props.onDropdownWillShow() !== false) {
+		if (this.state.showDropdown) {
 			this.show();
+		} else {
+			this.hide();
 		}
 	}
 
@@ -373,7 +374,7 @@ const styles = StyleSheet.create({
 		fontSize: 12,
 	},
 	modal: {
-		// flexGrow: 1
+		flex: 1
 	},
 	dropdown: {
 		position: 'absolute',
