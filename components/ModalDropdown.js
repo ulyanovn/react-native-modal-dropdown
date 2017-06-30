@@ -185,7 +185,10 @@ export default class ModalDropdown extends Component {
 				       transparent={true}
 				       onRequestClose={this._onRequestClose.bind(this)}
 				       supportedOrientations={['portrait', 'portrait-upside-down', 'landscape', 'landscape-left', 'landscape-right']}>
-					{!this.props.noOverlay && <View style={styles.overlay}/>}
+					{
+						!this.props.noOverlay &&
+						<View style={this.props.overlayStyle || styles.overlay}/>
+					}
 					<TouchableWithoutFeedback
 						onPress={this._onModalPress.bind(this)}>
 						<View style={styles.modal}>
